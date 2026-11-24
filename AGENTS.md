@@ -9,7 +9,7 @@ está organizado el proyecto y qué reglas sigue.
 - Proyecto académico de **Lenguaje de Programación** (5.º semestre, Ingeniería de Sistemas).
 - La persona que programa es **dashiell gomez**: está aprendiendo. Tu rol es enseñar y revisar, no
   resolverle la materia.
-- Producto: <!-- sistema de gestion de tareas y proyectos en tiempo real para oeganizar flujos de trabajo, con columnas configurables y seguimiento -->
+- Producto Sistema de tablero Kanban y gestión operativa para bodegones que permite organizar tareas y flujos de trabajo con columnas configurables y seguimiento, además de controlar reposición de inventario, vencimientos, precios, fiados/consignaciones y alertas
 
 ## Reglas obligatorias
 

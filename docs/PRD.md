@@ -1,93 +1,24 @@
-# PRD · <Nombre de tu producto>
-
-> Documento de requisitos del producto (Product Requirements Document).
-> Complétalo en el Sprint 0 (historia H0.3) y pide la aprobación del profesor en un Issue.
-> Cada requisito funcional (RF) se convierte en un Issue con la plantilla "Historia de usuario".
-
-| Campo | Valor |
-| --- | --- |
-| Alumno | |
-| Proyecto n.º | |
-| Sitio de referencia | |
-| Compañero revisor | |
-| URL desplegada | (se completa en el Sprint 5) |
+# Product Requirements Document (PRD) — tablero-kanban
 
 ## 1. Problema
+Los encargados de bodegones y pequeños comercios suelen llevar el control diario de forma fragmentada o manual, lo que dificulta detectar a tiempo productos próximos a vencer, planificar la reposición de stock, mantener precios actualizados y hacer seguimiento claro a ventas a crédito (fiados) o mercancía en consignación. A su vez, se requiere un tablero Kanban organizado para gestionar el avance de las tareas y entregas.
 
-¿Qué problema real resuelve y a quién le duele? (3 a 5 líneas)
+## 2. Usuarios objetivo
+- Dueño o administrador del bodegón: Supervisa inventario, precios, márgenes, alertas críticas y cuentas por cobrar (fiados / consignaciones).
+- Encargado de tienda / cajero: Consulta precios, registra operaciones diarias y atiende alertas de reposición o vencimiento.
+- Desarrollador / colaborador: Gestiona historias de usuario, hitos y tareas en el tablero Kanban y construye las funcionalidades del sistema.
 
-## 2. Usuarios
+## 3. Alcance
+- Incluido: Configuración del entorno, repositorio, protección de rama main y tablero en GitHub Projects con las historias del backlog; documentación en AGENTS.md y docs/PRD.md; desarrollo progresivo del tablero Kanban y módulos operativos del bodegón.
+- Excluido (en esta fase): Facturación fiscal compleja, integraciones de pago externas avanzadas o aplicaciones móviles nativas fuera del alcance inicial.
 
-- **Usuario principal:** quién es, qué necesita, desde qué dispositivo entra.
-- **Usuario secundario:**
+## 4. Requisitos
+- Funcionales: Visualizar y actualizar el estado de tareas en un tablero Kanban con columnas configurables; gestionar inventario, alertas de reposición y fechas de vencimiento; actualizar precios y controlar fiados o consignaciones con sus alertas.
+- No funcionales: Interfaz clara y ágil para la operación diaria; código organizado por funcionalidad de negocio en src/ con pruebas y trazabilidad en GitHub.
 
-## 3. Objetivo y métrica de éxito
-
-Ejemplo: «Un bodeguero registra una venta en menos de 10 segundos».
-
-## 4. Alcance del MVP
-
-Entre 5 y 8 funcionalidades que SÍ entran este semestre.
-
-1.
-2.
-3.
-
-### Funcionalidades → carpetas de `src/` (screaming architecture)
-
-Cada funcionalidad del alcance será una carpeta en `src/`. Nómbralas en inglés y en plural.
-
-| Funcionalidad | Carpeta |
-| --- | --- |
-| Ejemplo: ventas | `src/sales` |
-| | |
-
-## 5. Fuera de alcance
-
-Lo que NO vas a construir.
-
--
-
-## 6. Requisitos funcionales
-
-| ID | Requisito | Prioridad (alta, media, baja) |
-| --- | --- | --- |
-| RF-01 | | |
-| RF-02 | | |
-
-## 7. Requisitos no funcionales
-
-- Responsive, móvil primero (375 px y 1280 px).
-- Lighthouse ≥ 90 en Accesibilidad y Buenas prácticas.
-- 0 errores en la consola del navegador.
-- Funciona con 10.000 registros sin congelarse.
-
-## 8. Modelo de datos
-
-Diagrama entidad-relación y tablas PostgreSQL con tipos, claves y restricciones.
-GitHub dibuja diagramas Mermaid; edita este ejemplo:
-
-```mermaid
-erDiagram
-  CLIENTE ||--o{ PEDIDO : hace
-  PEDIDO ||--|{ LINEA_PEDIDO : contiene
-  PRODUCTO ||--o{ LINEA_PEDIDO : aparece_en
-  CLIENTE {
-    int id PK
-    text nombre
-    text telefono
-  }
-  PEDIDO {
-    int id PK
-    int cliente_id FK
-    timestamptz creado_en
-  }
-```
-
-## 9. Reto técnico distintivo
-
-El que te tocó en el catálogo y cómo piensas resolverlo.
-
-## 10. Riesgos y preguntas abiertas
-
--
+## 5. Funcionalidades y carpeta en src/
+- Tablero Kanban (src/tablero/): Gestión visual de tarjetas, columnas y estados de seguimiento.
+- Inventario y reposición (src/inventario/): Control de existencias, umbrales mínimos y alertas de reposición.
+- Vencimientos y alertas (src/vencimientos/): Seguimiento de fechas de caducidad y alertas preventivas.
+- Precios y catálogo (src/precios/): Consulta y actualización de precios de los productos.
+- Fiados y consignaciones (src/fiados/): Registro y seguimiento de créditos/consignaciones y alertas de cobro o liquidación.
