@@ -1,6 +1,6 @@
-# Mi producto
+# tablero-kanban
 
-> **Alumno:** cambia este título por el nombre de tu producto y esta línea por una frase que lo explique.
+> **dashiell:** tablero-kanban organizador.
 > Proyecto n.º __ del catálogo · Sitio de referencia: __ · [PRD](docs/PRD.md) · URL publicada: __
 
 Plantilla del proyecto de **Lenguaje de Programación · 2026**.
@@ -22,7 +22,7 @@ Si te falta alguno, sigue el tutorial `tutoriales/01-instalacion-entorno.md` del
    gh repo clone TU_USUARIO/bodega-pos
    cd bodega-pos
    ```
-3. **Ponle el nombre de tu producto** en dos lugares (así tus contenedores no se mezclan con los
+3. **tablero-kanban** en dos lugares (así tus contenedores no se mezclan con los
    de un compañero): la línea `name: mi-producto` de `docker-compose.yml` y el campo `"name"` de
    `package.json`. Usa minúsculas y guiones, por ejemplo `bodega-pos`.
 4. **Instala las dependencias:**
@@ -88,7 +88,7 @@ La primera vez que corras `npm run test:e2e` instala el navegador: `npx playwrig
 
 ---
 
-## Qué trae la plantilla
+estrutura de carpeta en src, herramientas de pruebas configuradas y uso de docker
 
 ```
 .github/
