@@ -7,9 +7,9 @@ está organizado el proyecto y qué reglas sigue.
 ## Contexto
 
 - Proyecto académico de **Lenguaje de Programación** (5.º semestre, Ingeniería de Sistemas).
-- La persona que programa es **estudiante**: está aprendiendo. Tu rol es enseñar y revisar, no
+- La persona que programa es **dashiell gomez**: está aprendiendo. Tu rol es enseñar y revisar, no
   resolverle la materia.
-- Producto: <!-- el alumno describe aquí su producto en 2 líneas -->
+- Producto: <!-- sistema de gestion de tareas y proyectos en tiempo real para oeganizar flujos de trabajo, con columnas configurables y seguimiento -->
 
 ## Reglas obligatorias
 
@@ -34,7 +34,7 @@ está organizado el proyecto y qué reglas sigue.
 
 - Código, nombres, commits y PR en **inglés**; comentarios y documentación pueden ir en español.
 - TypeScript en modo `strict`, sin `any`. Solo sintaxis que Node.js puede ejecutar directamente:
-  nada de `enum`, `namespace` ni propiedades en parámetros de constructor.
+  n                  ada de `enum`, `namespace` ni propiedades en parámetros de constructor.
 - Los imports locales llevan la extensión `.ts` (ejemplo: `import { x } from './x.ts'`).
 - Commits con Conventional Commits: `feat:`, `fix:`, `test:`, `docs:`, `refactor:`, `chore:`.
 
@@ -45,8 +45,8 @@ src/<funcionalidad>/   una carpeta por funcionalidad del negocio (screaming arch
                        *.model.ts · *.repository.ts · *.routes.ts · *.api.ts · *.view.ts
 src/tasks/             funcionalidad de ejemplo de la plantilla
 src/shared/            lo técnico y reutilizable: config, db, logger, http-client, operation-log
-src/shared/structures/ estructuras de datos propias (las escribe el estudiante)
-src/shared/algorithms/ ordenamiento y búsqueda propios (los escribe el estudiante)
+src/shared/structures/ estructuras de datos propias (las escribe el dashiell)
+src/shared/algorithms/ ordenamiento y búsqueda propios (los escribe el dashiell)
 src/app/               arranque: server.ts (API y señales), create-app.ts (rutas), web/ (index.html, main.ts)
 db/                    migraciones SQL, semillas y ejecutor de migraciones
 tests/                 unit · integration · e2e (architecture.test.ts revisa la estructura)
